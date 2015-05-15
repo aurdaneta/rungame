@@ -16,6 +16,7 @@ public class Control : MonoBehaviour {
 
 		if (Input.GetKey (KeyCode.Space)) {
 			sintelAnim.CrossFade("Saltar", 0.5f);
+			//sintelAnim.Play("Saltar");
 		}
 
 		if (Input.GetKey (KeyCode.LeftArrow)) {
