@@ -1,25 +1,29 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Control : MonoBehaviour {
+public class Move : MonoBehaviour {
 
-	public Animator sintelAnim;
+
+	private Animator myAnimator;
 
 	// Use this for initialization
 	void Start () {
-		sintelAnim = GetComponent<Animator> ();
+		myAnimator = GetComponent<Animator> ();
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		sintelAnim.SetFloat("VSpeed", Input.GetAxis("Vertical"));
+
+		myAnimator.SetFloat ("VSpeed", Input.GetAxis ("Vertical"));
+
 		if (Input.GetButtonDown("Jump")){
-			sintelAnim.SetBool("Jumping", true);
+			myAnimator.SetBool("Jumping", true);
 			Invoke("StopJumping", 1.0f);
 		}
+	
 	}
 
 	void StopJumping(){
-		sintelAnim.SetBool("Jumping", false);
+		myAnimator.SetBool("Jumping", false);
 	}
 }
