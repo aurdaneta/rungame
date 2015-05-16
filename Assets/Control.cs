@@ -3,7 +3,7 @@ using System.Collections;
 
 public class Control : MonoBehaviour {
 
-	public Animator sintelAnim;
+	private Animator sintelAnim;
 
 	// Use this for initialization
 	void Start () {
