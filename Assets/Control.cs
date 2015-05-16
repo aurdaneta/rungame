@@ -13,6 +13,7 @@ public class Control : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		sintelAnim.SetFloat("VSpeed", Input.GetAxis("Vertical"));
+		sintelAnim.SetFloat("HSpeed", Input.GetAxis("Horizontal"));
 		if (Input.GetButtonDown("Jump")){
 			sintelAnim.SetBool("Jumping", true);
 			Invoke("StopJumping", 1.0f);
